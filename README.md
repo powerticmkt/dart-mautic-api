@@ -77,6 +77,25 @@ The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/l
   String mauticVersion;
 ```
 
+The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) has following methods:
+
+```dart
+/// Return Current User
+Future<MauticUser> getCurrentUser()
+
+/// Return User by ID
+Future<MauticUser> getUserByID(int _id)
+
+/// Return All Users
+Future<List<MauticUser>> getUsers()
+
+/// Return Contact by ID
+Future<MauticContact> getContactByID(int _id)
+
+/// Return All Contacts
+Future<List<MauticContact>> getContacts({int page = 0, String s = 'email:'})
+```
+
 ### MauticUser
 
 Class [`MauticUser`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_user.dart)  has folowing attributes:
