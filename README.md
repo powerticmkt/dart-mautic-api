@@ -118,5 +118,11 @@ Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/l
   final DateTime dateIdentified;
 
   /// Return if Contact is Identified
-  bool get isIdentified => email.isNotEmpty;
+  bool get isIdentified;
+```
+
+Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has folowing methods:
+
+```dart
+  String gravatarUrl({int size = 96});
 ```
