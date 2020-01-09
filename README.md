@@ -124,5 +124,6 @@ Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/l
 Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has folowing methods:
 
 ```dart
+  /// Return Gravatar URL
   String gravatarUrl({int size = 96});
 ```
