@@ -2,8 +2,6 @@
 
 Mautic API Wrapper for Dart and Flutter
 
-
-
 ## Basic Usage
 
 ```dart
