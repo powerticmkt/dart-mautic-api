@@ -69,7 +69,7 @@ var api = MauticAPI('https://yourmauticaddress.com', 'username', 'password');
 
 ### MauticUser
 
-Class `MauticUser`  has folowing attributes:
+Class (`MauticUser`)[https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_user.dart]  has folowing attributes:
 
 ```dart
   /// User ID
