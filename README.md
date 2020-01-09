@@ -55,7 +55,7 @@ void main() async {
 
 ### MauticAPI
 
-The class `MauticAPI`provide a constructor with 3 arguments:
+The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) provide a constructor with 3 arguments:
 
 - `base_url`: Your mautic URL (eg: https://yourmauticaddress.com)
 - `username`: Your Mautic Username
@@ -65,6 +65,16 @@ Sample usage:
 
 ```dart
 var api = MauticAPI('https://yourmauticaddress.com', 'username', 'password');
+```
+
+The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) has following attributes:
+
+```dart
+  /// Request Has Success?
+  bool hasSuccess = false;
+
+  /// Current Mautic Version
+  String mauticVersion;
 ```
 
 ### MauticUser

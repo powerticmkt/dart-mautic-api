@@ -5,24 +5,30 @@ import 'package:http/http.dart';
 /// Base Mautic REST API
 class MauticAPIBase {
   /// Mautic Base URL
+  @protected
   final String _baseurl;
 
   /// Mautic User Name
+  @protected
   final String _username;
 
   /// Mautic Password
+  @protected
   final String _password;
 
   /// Request Response
+  @protected
   Response _response;
 
   /// Request Has Success?
   bool hasSuccess = false;
 
   /// Request Response body
+  @protected
   String responseBody;
 
   /// Request Responde Headers
+  @protected
   Map<String, String> responseHeaders;
 
   /// Current Mautic Version
