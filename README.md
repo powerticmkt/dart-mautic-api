@@ -69,4 +69,23 @@ var api = MauticAPI('https://yourmauticaddress.com', 'username', 'password');
 
 ### MauticUser
 
+Class `MauticUser`  has folowing attributes:
+
+```dart
+  /// User ID
+  final int id;
+
+  /// User First Name
+  final String firstName;
+
+  /// User Last Name
+  final String lastName;
+
+  /// User Email
+  final String email;
+
+  /// User Online Status
+  final String onlineStatus;
+```
+
 ### MauticContact
