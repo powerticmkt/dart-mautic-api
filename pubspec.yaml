@@ -1,6 +1,6 @@
 name: mautic_api
-description: Mautic API Wrapper for Dart and Flutter
-version: 1.0.1
+description: Mautic REST API Package Wrapper for Dart and Flutter
+version: 1.0.2
 homepage: https://github.com/luizeof/dart-mautic-api
 
 environment:
