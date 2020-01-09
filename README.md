@@ -25,8 +25,7 @@ You can create a new instance of class `MauticAPI` with 3 arguments: `base_url`,
   final api = MauticAPI('https://yourmauticaddress.com', 'username', 'password');
 ```
 
-To test your credentials you can call `getCurrentUser()` to 
-get your `MauticUser`. If the credentials fail the method return `null`.
+To test your credentials you can call `getCurrentUser()` to get your `MauticUser`. If the credentials fail the method return `null`.
 
 ```dart
   var user = await api.getCurrentUser();
