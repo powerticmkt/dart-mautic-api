@@ -81,19 +81,19 @@ The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/l
 
 ```dart
 /// Return Current User
-Future<MauticUser> getCurrentUser()
+Future<MauticUser> getCurrentUser();
 
 /// Return User by ID
-Future<MauticUser> getUserByID(int _id)
+Future<MauticUser> getUserByID(int _id);
 
 /// Return All Users
-Future<List<MauticUser>> getUsers()
+Future<List<MauticUser>> getUsers();
 
 /// Return Contact by ID
-Future<MauticContact> getContactByID(int _id)
+Future<MauticContact> getContactByID(int _id);
 
 /// Return All Contacts
-Future<List<MauticContact>> getContacts({int page = 0, String s = 'email:'})
+Future<List<MauticContact>> getContacts({int page = 0, String s = 'email:'});
 ```
 
 ### MauticUser
