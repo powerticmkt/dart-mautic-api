@@ -74,12 +74,16 @@ Class [`MauticUser`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/
 ```dart
   /// User ID
   final int id;
+
   /// User First Name
   final String firstName;
+
   /// User Last Name
   final String lastName;
+
   /// User Email
   final String email;
+
   /// User Online Status
   final String onlineStatus;
 ```
@@ -91,20 +95,28 @@ Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/l
 ```dart
   /// Contact ID
   final int id;
+
   /// Contact First Name
   final String firstName;
+
   /// Contact Last Name
   final String lastName;
+
   /// Contact Email
   final String email;
+
   /// Contact Points
   final int points;
+
   /// Contact Date Added
   final DateTime dateAdded;
+
   /// Contact Date Last Active
   final DateTime dateLastActive;
+
   /// Contact Date Identified
   final DateTime dateIdentified;
+
   /// Return if Contact is Identified
   bool get isIdentified => email.isNotEmpty;
 ```
