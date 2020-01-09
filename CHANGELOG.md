@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+- Fix Dart Analysis
+- Updated README
+
 ## 1.0.2
 
 - Fix Dart Analysis
