@@ -57,7 +57,7 @@ void main() async {
 
 The class `MauticAPI`provide a constructor with 3 arguments:
 
-- `base_url`: Your mautic URL (eg: https://m.luizeof.com.br)
+- `base_url`: Your mautic URL (eg: https://yourmauticaddress.com)
 - `username`: Your Mautic Username
 - `password`: Your Mautic Password
 
