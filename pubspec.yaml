@@ -1,0 +1,12 @@
+name: mautic_api
+description: Mautic API Wrapper for Dart and Flutter
+version: 1.0.0
+homepage: https://github.com/luizeof/dart-mautic-api
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  crypto: any
+  http: any
+  meta: any
