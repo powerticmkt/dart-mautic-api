@@ -46,7 +46,7 @@ class MauticAPI extends MauticAPIBase {
   Future<List<MauticUser>> getUsers() async {
     await httpGet(users_api_endpoint);
     if (hasSuccess) {
-      List<MauticUser> users = [];
+      var users = <MauticUser>[];
       final data = getJson()['users'];
       for (var i = 0; i < data.length; i++) {
         final _user = (data[i]);
@@ -102,7 +102,7 @@ class MauticAPI extends MauticAPIBase {
       {int page = 0, String s = 'email:'}) async {
     await httpGet(contacts_api_endpoint + '?' + s + '&page=' + page.toString());
     if (hasSuccess) {
-      List<MauticContact> contacts = [];
+      var contacts = <MauticContact>[];
       final data = [];
 
       getJson()['contacts'].forEach((k, v) => data.add(v));
