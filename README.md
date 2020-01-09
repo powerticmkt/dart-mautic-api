@@ -52,3 +52,23 @@ void main() async {
   print(user.onlineStatus);
 }
 ```
+
+## Avaiable Endpoints
+
+### MauticAPI
+
+The class `MauticAPI`provide a constructor with 3 arguments:
+
+- `base_url`: Your mautic URL (eg: https://m.luizeof.com.br)
+- `username`: Your Mautic Username
+- `password`: Your Mautic Password
+
+Sample usage:
+
+```dart
+var api = MauticAPI('https://yourmauticaddress.com', 'username', 'password');
+```
+
+### MauticUser
+
+### MauticContact
