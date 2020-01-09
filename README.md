@@ -22,8 +22,7 @@ import 'package:mautic_api/mautic_api.dart';
 You can create a new instance of class `MauticAPI` with 3 arguments: `base_url`, `username` and `password`:
 
 ```dart
-  final api =
-      MauticAPI('https://yourmauticaddress.com', 'username', 'password');
+  final api = MauticAPI('https://yourmauticaddress.com', 'username', 'password');
 ```
 
 To test your credentials you can call `getCurrentUser()` to 
