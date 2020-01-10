@@ -20,11 +20,11 @@ class MauticAPIBase {
 
   /// Local Cache Path
   @protected
-  String _localPath;
+  final String _localPath;
 
   /// The time to expire local cache in minutes
   @protected
-  int _localExpiresMinutes;
+  final int _localExpiresMinutes;
 
   /// Request Response
   @protected
