@@ -1,6 +1,6 @@
 name: mautic_api
 description: Dart and Flutter Package Wrapper for Native Mautic REST API using Basic Authentication
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/luizeof/dart-mautic-api
 
 environment:
