@@ -80,8 +80,11 @@ The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/l
   /// Request Has Success?
   bool hasSuccess = false;
 
-  /// Current Mautic Version
+  /// Current Mautic Version?
   String mauticVersion;
+
+  /// Is Data Read from Cache?
+  bool isCachedData = false;
 ```
 
 The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) has following methods:
