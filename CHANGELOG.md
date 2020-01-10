@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.6
+
+- Class `MauticEmail`
+- Update README
+
 ## 1.0.5
 
 - Update README

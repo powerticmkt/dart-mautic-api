@@ -103,13 +103,25 @@ Future<List<MauticUser>> getUsers();
 Future<MauticContact> getContactByID(int _id);
 
 /// Return All Contacts
-Future<List<MauticContact>> getContacts({int page = 0, String s = 'email:'});
+Future<List<MauticContact>> getContacts({ int page = 0, String s = 'email:%@%', String ob = 'last_active', String od = 'desc', int limit = 5});
 
 /// Return the number of identified contacts
 Future<int> getTotalContacts();
 
 /// Return the number of pagination of contacts
 Future<int> getContactsPagination({int limit = 30});
+
+/// Return All Emails
+Future<List<MauticEmail>> getEmails({ int page = 0, String s = '', String ob = 'id', String od = 'desc', int limit = 30});
+
+/// Return Contact by ID
+Future<MauticEmail> getEmailByID(int _id);
+
+/// Return the number of emails
+Future<int> getTotalEmails();
+
+/// Return the number of pagination of emails
+Future<int> getEmailsPagination({int limit = 30});
 ```
 
 ### MauticUser
@@ -171,4 +183,46 @@ Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/l
 ```dart
   /// Return Gravatar URL
   String gravatarUrl({int size = 96});
+```
+
+### MauticEmail
+
+Class [`MauticEmail`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_email.dart)  has the following attributes:
+
+```dart
+  final int id;
+
+  final bool isPublished;
+
+  final String name;
+
+  final String subject;
+
+  final String fromAddress;
+
+  final String fromName;
+
+  final String replyToAddress;
+
+  final String customHtml;
+
+  final String plainText;
+
+  final String template;
+
+  final String emailType;
+
+  final String language;
+
+  final DateTime publishUp;
+
+  final DateTime publishDown;
+
+  final int readCount;
+
+  final int sentCount;
+
+  double readRate;
+
+  bool hasTextPlain;
 ```

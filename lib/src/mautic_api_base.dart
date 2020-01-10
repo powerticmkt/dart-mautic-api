@@ -55,6 +55,10 @@ class MauticAPIBase {
   @protected
   final contacts_api_endpoint = '/api/contacts';
 
+  /// Mautic Contacts Endpoint
+  @protected
+  final emails_api_endpoint = '/api/emails';
+
   @protected
   String current_endpoint;
 
