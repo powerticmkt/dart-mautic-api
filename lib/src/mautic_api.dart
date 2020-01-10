@@ -99,10 +99,26 @@ class MauticAPI extends MauticAPIBase {
   }
 
   /// Return All Contacts
-  Future<List<MauticContact>> getContacts(
-      {int page = 0, String s = 'email:%@%'}) async {
+  Future<List<MauticContact>> getContacts({
+    int page = 0,
+    String s = 'email:%@%',
+    String ob = 'last_active',
+    String od = 'desc',
+    int limit = 5,
+  }) async {
     await httpGet(
-        contacts_api_endpoint + '?search=' + s + '&page=' + page.toString());
+      contacts_api_endpoint +
+          '?search=' +
+          s +
+          '&page=' +
+          page.toString() +
+          '&orderBy=' +
+          ob +
+          '&orderByDir=' +
+          od +
+          '&limit=' +
+          limit.toString(),
+    );
     if (hasSuccess) {
       var contacts = <MauticContact>[];
       final data = [];
