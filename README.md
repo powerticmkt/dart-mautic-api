@@ -51,13 +51,13 @@ void main() async {
 }
 ```
 
-## Avaiable Endpoints
+## Available Endpoints
 
 ### MauticAPI
 
-The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) provide a constructor with 3 arguments:
+The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) provides a constructor with 3 arguments:
 
-- `base_url`: Your mautic URL (eg: https://yourmauticaddress.com)
+- `base_url`: Your Mautic URL (eg: https://yourmauticaddress.com)
 - `username`: Your Mautic Username
 - `password`: Your Mautic Password
 
@@ -114,7 +114,7 @@ Future<int> getContactsPagination({int limit = 30});
 
 ### MauticUser
 
-Class [`MauticUser`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_user.dart)  has folowing attributes:
+Class [`MauticUser`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_user.dart)  has the following attributes:
 
 ```dart
   /// User ID
@@ -135,7 +135,7 @@ Class [`MauticUser`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/
 
 ### MauticContact
 
-Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has folowing attributes:
+Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has the following attributes:
 
 ```dart
   /// Contact ID
@@ -166,7 +166,7 @@ Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/l
   bool get isIdentified;
 ```
 
-Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has folowing methods:
+Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has the following methods:
 
 ```dart
   /// Return Gravatar URL
