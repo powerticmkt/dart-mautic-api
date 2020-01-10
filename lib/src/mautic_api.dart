@@ -100,8 +100,9 @@ class MauticAPI extends MauticAPIBase {
 
   /// Return All Contacts
   Future<List<MauticContact>> getContacts(
-      {int page = 0, String s = 'email:'}) async {
-    await httpGet(contacts_api_endpoint + '?' + s + '&page=' + page.toString());
+      {int page = 0, String s = 'email:%@%'}) async {
+    await httpGet(
+        contacts_api_endpoint + '?search=' + s + '&page=' + page.toString());
     if (hasSuccess) {
       var contacts = <MauticContact>[];
       final data = [];
