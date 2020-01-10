@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.5
+
+- Update README
+- Contacts New Methods
+- Fix Cached Filenames
+
 ## 1.0.4
 
 - Fix Dart Analysis

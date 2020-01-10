@@ -104,6 +104,12 @@ Future<MauticContact> getContactByID(int _id);
 
 /// Return All Contacts
 Future<List<MauticContact>> getContacts({int page = 0, String s = 'email:'});
+
+/// Return the number of identified contacts
+Future<int> getTotalContacts();
+
+/// Return the number of pagination of contacts
+Future<int> getContactsPagination({int limit = 30});
 ```
 
 ### MauticUser

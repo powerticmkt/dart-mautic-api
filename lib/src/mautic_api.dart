@@ -146,5 +146,21 @@ class MauticAPI extends MauticAPIBase {
     }
   }
 
+  /// Return the number of identified contacts
+  Future<int> getTotalContacts() async {
+    await getContacts(limit: 1);
+    return int.tryParse(getJson()['total'].toString());
+  }
+
+  /// Return the number of pagination of contacts
+  Future<int> getContactsPagination({int limit = 30}) async {
+    var x = await getTotalContacts();
+    try {
+      return (x / limit).ceil();
+    } catch (e) {
+      return null;
+    }
+  }
+
   ///
 }

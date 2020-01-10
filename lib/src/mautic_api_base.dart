@@ -87,7 +87,7 @@ class MauticAPIBase {
   /// Return Local File Cache
   Future<File> _localFile(String fname) async {
     var newfname = fname;
-    newfname = fname.replaceAllMapped(RegExp(r'[/?:&=*^!#]'), (match) {
+    newfname = fname.replaceAllMapped(RegExp(r'[/?:&=*%@^!#]'), (match) {
       return '_';
     });
     return File('$_localPath/$newfname.json');
