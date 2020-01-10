@@ -2,9 +2,9 @@ import 'mautic_api_base.dart';
 import 'mautic_contact.dart';
 import 'mautic_user.dart';
 
-// Mautic API
+/// Mautic API
 class MauticAPI extends MauticAPIBase {
-  /// Constructor
+  /// Default Constructor
   MauticAPI(String _baseurl, String _username, String _password,
       {String localPath = './tmp', int localExpiresMinutes = 5})
       : super(_baseurl, _username, _password, localPath, localExpiresMinutes);
