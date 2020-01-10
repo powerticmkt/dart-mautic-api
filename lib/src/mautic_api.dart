@@ -5,8 +5,9 @@ import 'mautic_user.dart';
 // Mautic API
 class MauticAPI extends MauticAPIBase {
   /// Constructor
-  MauticAPI(String _baseurl, String _username, String _password)
-      : super(_baseurl, _username, _password);
+  MauticAPI(String _baseurl, String _username, String _password,
+      {String localPath = './tmp', int localExpiresMinutes = 5})
+      : super(_baseurl, _username, _password, localPath, localExpiresMinutes);
 
   /// Return Current User
   Future<MauticUser> getCurrentUser() async {
@@ -23,6 +24,17 @@ class MauticAPI extends MauticAPIBase {
     } else {
       return null;
     }
+  }
+
+  /// Parse DateTime Values
+  DateTime _dateParse(dynamic d) {
+    return DateTime.tryParse((d == null) ? '' : d.toString());
+  }
+
+  /// Parse int Values
+  int _intParse(dynamic d) {
+    var i = int.tryParse((d == null) ? '0' : d.toString());
+    return (i == null) ? 0 : i;
   }
 
   /// Return User by ID
@@ -64,17 +76,6 @@ class MauticAPI extends MauticAPIBase {
     } else {
       return null;
     }
-  }
-
-  /// Parse DateTime Values
-  DateTime _dateParse(dynamic d) {
-    return DateTime.tryParse((d == null) ? '' : d.toString());
-  }
-
-  /// Parse int Values
-  int _intParse(dynamic d) {
-    var i = int.tryParse((d == null) ? '0' : d.toString());
-    return (i == null) ? 0 : i;
   }
 
   /// Return Contact by ID

@@ -12,4 +12,6 @@ void main() async {
   print(user.lastName);
   print(user.email);
   print(user.onlineStatus);
+
+  print('cached request?: ' + api.isCachedData.toString());
 }
