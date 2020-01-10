@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.4
+
+- Fix Dart Analysis
+- Add Cached Requests
+- Updated README
+
 ## 1.0.3
 
 - Fix Dart Analysis
