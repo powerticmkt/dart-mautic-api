@@ -1,6 +1,7 @@
 import 'mautic_api_base.dart';
 import 'mautic_contact.dart';
 import 'mautic_user.dart';
+import 'mautic_email.dart';
 
 /// Mautic API
 class MauticAPI extends MauticAPIBase {
@@ -155,6 +156,106 @@ class MauticAPI extends MauticAPIBase {
   /// Return the number of pagination of contacts
   Future<int> getContactsPagination({int limit = 30}) async {
     var x = await getTotalContacts();
+    try {
+      return (x / limit).ceil();
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// Return All Emails
+  Future<List<MauticEmail>> getEmails({
+    int page = 0,
+    String s = '',
+    String ob = 'id',
+    String od = 'desc',
+    int limit = 30,
+  }) async {
+    await httpGet(
+      emails_api_endpoint +
+          '?search=' +
+          s +
+          '&page=' +
+          page.toString() +
+          '&orderBy=' +
+          ob +
+          '&orderByDir=' +
+          od +
+          '&limit=' +
+          limit.toString(),
+    );
+    if (hasSuccess) {
+      var emails = <MauticEmail>[];
+      final data = [];
+
+      getJson()['emails'].forEach((k, v) => data.add(v));
+
+      for (var i = 0; i < data.length; i++) {
+        final _email = data[i];
+        emails.add(
+          MauticEmail(
+            _email['id'],
+            _email['isPublished'],
+            _email['name'],
+            _email['subject'],
+            _email['fromAddress'],
+            _email['fromName'],
+            _email['replyToAddress'],
+            _email['customHtml'],
+            _email['plainText'],
+            _email['template'],
+            _email['emailType'],
+            _email['language'],
+            _dateParse(_email['publishUp']),
+            _dateParse(_email['publishDown']),
+            _intParse(_email['readCount']),
+            _intParse(_email['sentCount']),
+          ),
+        );
+      }
+      return emails;
+    } else {
+      return null;
+    }
+  }
+
+  /// Return Contact by ID
+  Future<MauticEmail> getEmailByID(int _id) async {
+    await httpGet(emails_api_endpoint + '/' + _id.toString() + '?minimal');
+    if (hasSuccess) {
+      final _email = getJson();
+      return MauticEmail(
+        _email['email']['id'],
+        _email['email']['isPublished'],
+        _email['email']['name'],
+        _email['email']['subject'],
+        _email['email']['fromAddress'],
+        _email['email']['fromName'],
+        _email['email']['replyToAddress'],
+        _email['email']['customHtml'],
+        _email['email']['plainText'],
+        _email['email']['template'],
+        _email['email']['emailType'],
+        _email['email']['language'],
+        _dateParse(_email['email']['publishUp']),
+        _dateParse(_email['email']['publishDown']),
+        _intParse(_email['email']['readCount']),
+        _intParse(_email['email']['sentCount']),
+      );
+    } else {
+      return null;
+    }
+  }
+
+  /// Return the number of emails
+  Future<int> getTotalEmails() async {
+    await getEmails(limit: 1);
+    return int.tryParse(getJson()['total'].toString());
+  }
+
+  /// Return the number of pagination of emails
+  Future<int> getEmailsPagination({int limit = 30}) async {
+    var x = await getTotalEmails();
     try {
       return (x / limit).ceil();
     } catch (e) {
