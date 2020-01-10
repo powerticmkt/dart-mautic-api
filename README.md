@@ -72,7 +72,7 @@ There are also two optional arguments to handle cache:
 - `localPath`: The Path for cache directory (default: `./tmp`)
 - `localExpiresMinutes`: Time to Expire cache in minutes (default: 5)
 
-On Flutter you can use the [`path_provider`](https://pub.dev/packages/path_provider) package to get default app cache directory using `getApplicationDocumentsDirectory().path`.
+On Flutter you can use the [`path_provider`](https://pub.dev/packages/path_provider) package to get default app cache directory.
 
 The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) has following attributes:
 
