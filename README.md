@@ -55,7 +55,7 @@ void main() async {
 
 ### MauticAPI
 
-The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) provides a constructor with 3 arguments:
+The class [`MauticAPI`](https://github.com/powerticmkt/dart-mautic-api/blob/master/lib/src/mautic_api.dart) provides a constructor with 3 arguments:
 
 - `base_url`: Your Mautic URL (eg: https://yourmauticaddress.com)
 - `username`: Your Mautic Username
@@ -74,7 +74,7 @@ There are also two optional arguments to handle cache:
 
 On Flutter you can use the [`path_provider`](https://pub.dev/packages/path_provider) package to get default app cache directory.
 
-The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) has following attributes:
+The class [`MauticAPI`](https://github.com/powerticmkt/dart-mautic-api/blob/master/lib/src/mautic_api.dart) has following attributes:
 
 ```dart
   /// Request Has Success?
@@ -87,7 +87,7 @@ The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/l
   bool isCachedData = false;
 ```
 
-The class [`MauticAPI`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_api.dart) has following methods:
+The class [`MauticAPI`](https://github.com/powerticmkt/dart-mautic-api/blob/master/lib/src/mautic_api.dart) has following methods:
 
 ```dart
 /// Return Current User
@@ -126,7 +126,7 @@ Future<int> getEmailsPagination({int limit = 30});
 
 ### MauticUser
 
-Class [`MauticUser`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_user.dart)  has the following attributes:
+Class [`MauticUser`](https://github.com/powerticmkt/dart-mautic-api/blob/master/lib/src/mautic_user.dart)  has the following attributes:
 
 ```dart
   /// User ID
@@ -147,7 +147,7 @@ Class [`MauticUser`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/
 
 ### MauticContact
 
-Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has the following attributes:
+Class [`MauticContact`](https://github.com/powerticmkt/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has the following attributes:
 
 ```dart
   /// Contact ID
@@ -178,7 +178,7 @@ Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/l
   bool get isIdentified;
 ```
 
-Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has the following methods:
+Class [`MauticContact`](https://github.com/powerticmkt/dart-mautic-api/blob/master/lib/src/mautic_contact.dart)  has the following methods:
 
 ```dart
   /// Return Gravatar URL
@@ -187,7 +187,7 @@ Class [`MauticContact`](https://github.com/luizeof/dart-mautic-api/blob/master/l
 
 ### MauticEmail
 
-Class [`MauticEmail`](https://github.com/luizeof/dart-mautic-api/blob/master/lib/src/mautic_email.dart)  has the following attributes:
+Class [`MauticEmail`](https://github.com/powerticmkt/dart-mautic-api/blob/master/lib/src/mautic_email.dart)  has the following attributes:
 
 ```dart
   final int id;
